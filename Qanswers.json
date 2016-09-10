@@ -1,0 +1,17 @@
+{ "questions": [{
+    "content": "Whos the best Athelte of all-time?",
+    "author": "Bill Simmons",
+    "notes": "Sports"
+  }, {
+    "content": "Why the Boston Celtics were important for North America?",
+    "author": "Bill Simmons",
+    "notes": "Sports"
+  }],
+  "answers": [{
+    "user": "Bill Simmons",
+    "comment": "Michael Jordan"
+  }, {
+    "user": "Bill Simmons",
+    "comment": "They broke down racial barriers"
+  }]
+}
