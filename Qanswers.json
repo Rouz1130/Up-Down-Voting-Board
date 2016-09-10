@@ -1,17 +1,18 @@
+
 { "questions": [{
-    "content": "Whos the best Athelte of all-time?",
+    "content":"Whos the best Athelte of all-time?",
     "author": "Bill Simmons",
-    "notes": "Sports"
+    "notes": "Sports",
+    "votes": 0
   }, {
     "content": "Why the Boston Celtics were important for North America?",
     "author": "Bill Simmons",
-    "notes": "Sports"
-  }],
-  "answers": [{
-    "user": "Bill Simmons",
-    "comment": "Michael Jordan"
+    "notes": "Sports",
+    "votes": 0
   }, {
-    "user": "Bill Simmons",
-    "comment": "They broke down racial barriers"
+    "content": "Whos the best Hockey player ever",
+    "author": "Don Cherry",
+    "notes": "Canadian Sports",
+    "votes": 0
   }]
 }
