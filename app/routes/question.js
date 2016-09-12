@@ -21,12 +21,26 @@ export default Ember.Route.extend({
 
     answerSave3(params) {
       var newAnswer = this.store.createRecord('answer', params);
-      var post = params.post;
-      post.get('answers').addObject(newAnswer);
+      var question = params.question;
+      question.get('questions').addObject(newAnswer);
       newAnswer.save().then(function() {
-        return post.save();
+        return question.save();
       });
-      this.transitionTo('post', params.post);
+      this.transitionTo('question', params.question);
     },
+
+    editAnswer(answer, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !== undefined) {
+          answer.set(key,params[key]);
+        }
+      });
+      answer.save();
+      this.transitionTo('question', params.question);
+    },
+
+    deleteAnswer(answer) {
+      answer.destroyRecord();
+    }
   }
 });
