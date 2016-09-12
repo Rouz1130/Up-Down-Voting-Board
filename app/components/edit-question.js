@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     },
     editQuestion(question) {
       var params = {
-        text:this.get('text'),
+        content:this.get('content'),
         notes:this.get('notes'),
       };
       this.set('editQuestionForm', false);
