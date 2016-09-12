@@ -1,1 +1,15 @@
-{{yield}}
+{{#if editAnswerForm}}
+<h3>Update</h3>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="content">Answer:</label>
+        {{input value=content id="content" placeholder=answer.content}}
+      </div>
+
+      <button {{action 'editAnswer' answer}}>Save Answer</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'editAnswerForm'}}>New Answer</button>
+{{/if}}
