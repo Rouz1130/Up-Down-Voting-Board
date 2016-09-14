@@ -13,11 +13,11 @@ export default Ember.Route.extend({
       newQuestion.save();
       this.transitionTo('index');
     },
-    upVote(question) {
+    upvote(question) {
       quesiton.incrmentProperty('votes');
       question.save();
     },
-    downVote(question) {
+    downvote(question) {
       question.decrementProperty('votes');
       question.save();
     },

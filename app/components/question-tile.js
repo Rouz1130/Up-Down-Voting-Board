@@ -5,8 +5,8 @@ export default Ember.Component.extend({
     upvote(question) {
 
     },
-      downVote(question) {
-        this.sendAction('downVote', quesiton);
+      downvote(question) {
+        this.sendAction('downvote', quesiton);
       },
   }
 });
