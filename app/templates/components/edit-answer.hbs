@@ -1,15 +1,20 @@
 {{#if editAnswerForm}}
-<h3>Update</h3>
+<h4>Update answer</h4>
   <div>
     <form>
       <div class="form-group">
-        <label for="content">Answer:</label>
+        <label for="content">Your Answer:</label>
         {{input value=content id="content" placeholder=answer.content}}
       </div>
 
-      <button {{action 'editAnswer' answer}}>Save Answer</button>
+      <div class="form-group">
+        <label for="content">Name:</label>
+        {{input value=author id="author" placeholder=answer.author}}
+      </div>
+
+      <button {{action 'editAnswer' answer}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'editAnswerForm'}}>New Answer</button>
+  <button {{action 'editAnswerForm'}}>Update Answer</button>
 {{/if}}

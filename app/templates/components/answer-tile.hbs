@@ -1,15 +1,13 @@
-<li>
-  <div class="row">
-    <div class="col-sm-3">
-      <button {{action 'upvote' answer}}>Vote Up</button>
-      <h4>{{answer.votes}}</h4>
-      <button {{action 'downvote' answer}}>Vote Down</button>
-    </div>
-    <div class="col-sm-9">
-      <h5>{{answer.content}}</h5>
-      <p>{{answer.author}}</p>
-      {{edit-answer answer=answer editAnswer="editAnswer"}}
-      <button {{action 'deleteAnswer' answer}}>Delete Answer</button>
-    </div>
+<div class="row">
+  <div class="col-sm-3">
+    <span class="glyphicon glyphicon-arrow-up" {{action 'upvote' answer}}></span>
+    <h4>{{answer.votes}}</h4>
+    <span class="glyphicon glyphicon-arrow-down" {{action 'downvote' answer}}></span>
   </div>
-</li>
+  <div class="col-sm-9">
+    <h5>{{answer.content}}</h5>
+    <p>{{answer.author}}</p>
+    {{edit-answer answer=answer editAnswer="editAnswer"}}
+    <button {{action 'deleteAnswer' answer}}>Delete Answer</button>
+  </div>
+</div>
