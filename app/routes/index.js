@@ -12,6 +12,14 @@ export default Ember.Route.extend({
       var newQuestion = this.store.createRecord('question', params);
       newQuestion.save();
       this.transitionTo('index');
-    }
+    },
+    upVote(question) {
+      quesiton.incrmentProperty('votes');
+      question.save();
+    },
+    downVote(question) {
+      question.decrementProperty('votes');
+      question.save();
+    },
   }
 });
