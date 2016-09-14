@@ -5,11 +5,6 @@
 {{edit-question question=model editQuestion="editQuestion"}}
 <button {{action 'delete' model}}>Delete Question</button>
 
-
-<ul>
-  {{#each model.answers as |answer|}}
-    {{answer-tile answer=answer deleteAnswer="deleteAnswer" editAnswer="editAnswer" upvote="upvote" downvote="downvote"}}
-  {{/each}}
-</ul>
+{{answers-display model=model deleteAnswer="deleteAnswer" editAnswer="editAnswer" upvote="upvote" downvote="downvote"}}
 
 {{new-answer question=model answerSave2="answerSave3"}}

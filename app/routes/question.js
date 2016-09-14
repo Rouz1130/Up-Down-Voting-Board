@@ -35,6 +35,7 @@ export default Ember.Route.extend({
     },
 
     editAnswer(answer, params) {
+      console.log("final step");
       Object.keys(params).forEach(function(key) {
         if(params[key] !== undefined) {
           answer.set(key,params[key]);

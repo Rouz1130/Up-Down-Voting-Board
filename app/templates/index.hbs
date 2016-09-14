@@ -1,7 +1,2 @@
-<ul>
-  {{#each model.questions as |question|}}
-    {{question-tile question=question upvote="upvote" downvote="downvote"}}
-  {{/each}}
-</ul>
-
+{{questions-display model=model upvote="upvote" downvote="downvote"}}
 {{new-question questionSave2="questionSave3"}}
