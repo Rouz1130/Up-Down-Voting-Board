@@ -41,6 +41,15 @@ export default Ember.Route.extend({
 
     deleteAnswer(answer) {
       answer.destroyRecord();
-    }
+    },
+
+    upvote(answer) {
+      answer.incrmentProperty('votes');
+      answer.save();
+    },
+    downVote(answer) {
+      answer.decrementProperty('votes');
+      answer.save();
+    },
   }
 });
