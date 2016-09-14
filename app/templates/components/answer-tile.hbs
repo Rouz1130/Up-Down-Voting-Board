@@ -1,7 +1,15 @@
 <li>
-  <h3>{{answer.content}}</h3>
-  <p>{{answer.author}}</p>
+ <div class="row">
+   <div class="col-sm-3">
+     <button {{action 'upvote' answer}}>Up Vote</button>
+     <h3>{{answer.votes}}</h3>
+     <button {{action 'downvote' answer}}>Down Vote</button>
+   </div>
+     <div class="col-sm-9">
+       <h3>{{answer.content}}</h3>
+       <h4>{{answer.author}}</h4>
+         {{edit-answer answer=answer editAnswer="editAnswer"}}
+         <button {{action 'deleteAnswer' answer}}>Delete</button>
+   </div>
+ </div>
 </li>
-
-{{edit-answer answer=answer editAnswer="editAnswer"}}
-<button {{action 'deleteAnswer' answer}}>Delete</button>
