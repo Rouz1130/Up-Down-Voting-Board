@@ -6,7 +6,12 @@ export default Ember.Route.extend({
   },
   actions: {
     delete(question) {
-      question.destroyRecord();
+      var answerDeletions = question.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answerDeletions).then(function() {
+        question.destroyRecord();
+      });
       this.transitionTo('index');
     },
 
@@ -22,7 +27,7 @@ export default Ember.Route.extend({
     answerSave3(params) {
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
-      question.get('questions').addObject(newAnswer);
+      question.get('answers').addObject(newAnswer);
       newAnswer.save().then(function() {
         return question.save();
       });
@@ -44,10 +49,11 @@ export default Ember.Route.extend({
     },
 
     upvote(answer) {
-      answer.incrmentProperty('votes');
+      answer.incrementProperty('votes');
       answer.save();
     },
-    downVote(answer) {
+
+    downvote(answer) {
       answer.decrementProperty('votes');
       answer.save();
     },

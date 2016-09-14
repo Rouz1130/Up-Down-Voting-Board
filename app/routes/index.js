@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     upvote(question) {
-      quesiton.incrmentProperty('votes');
+      question.incrementProperty('votes');
       question.save();
     },
     downvote(question) {

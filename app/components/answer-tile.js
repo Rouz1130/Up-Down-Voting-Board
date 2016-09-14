@@ -8,11 +8,11 @@ export default Ember.Component.extend({
     deleteAnswer(answer) {
       this.sendAction('deleteAnswer', answer);
     },
-    upvote(answer) {
+    upvote(answer){
       this.sendAction('upvote', answer);
     },
-    downVote(answer) {
-      this.sendAction('downVote', answer);
+    downvote(answer){
+      this.sendAction('downvote', answer);
     },
   }
 });

@@ -1,13 +1,14 @@
 <h3>{{model.content}}</h3>
-<h3>{{model.author}}</h3>
+<h5>{{model.author}}</h5>
 <p>{{model.notes}}</p>
 
 {{edit-question question=model editQuestion="editQuestion"}}
-<button {{action 'delete' model}}>Delete</button>
+<button {{action 'delete' model}}>Delete Question</button>
+
 
 <ul>
   {{#each model.answers as |answer|}}
-    {{answer-tile answer=answer deleteAnswer="deleteAnswer" editAnswer="editAnswer" upvote="upvote" downVote="downVote"}}
+    {{answer-tile answer=answer deleteAnswer="deleteAnswer" editAnswer="editAnswer" upvote="upvote" downvote="downvote"}}
   {{/each}}
 </ul>
 
